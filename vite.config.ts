@@ -35,6 +35,13 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
     resolve: {
       alias
     },
+    // css: {
+    //   preprocessorOptions: {
+    //     scss: {
+    //       additionalData: `@use "@/style/element/index.scss" as *;`
+    //     }
+    //   }
+    // },
     // 服务端渲染
     server: {
       // 是否开启 https

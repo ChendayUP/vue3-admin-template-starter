@@ -60,6 +60,7 @@ export function useDataThemeChange() {
   }
 
   function setPropertyPrimary(mode: string, i: number, color: string) {
+    debugger;
     document.documentElement.style.setProperty(
       `--el-color-primary-${mode}-${i}`,
       dataTheme.value ? darken(color, i / 10) : lighten(color, i / 10)

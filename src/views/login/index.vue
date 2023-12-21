@@ -6,7 +6,8 @@ import type { FormInstance } from "element-plus";
 import { useLayout } from "@/layout/hooks/useLayout";
 import { useUserStoreHook } from "@/store/modules/user";
 import { initRouter, getTopMenu } from "@/router/utils";
-import { ref, reactive, onMounted, onBeforeUnmount } from "vue";
+import { ref, reactive, onMounted, onBeforeUnmount, onBeforeMount } from "vue";
+import { useDataThemeChange } from "@/layout/hooks/useDataThemeChange";
 
 import user from "@/assets/svg/user.svg?component";
 import password from "@/assets/svg/password.svg?component";
@@ -62,6 +63,10 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   window.document.removeEventListener("keypress", onkeypress);
+});
+
+onBeforeMount(() => {
+  useDataThemeChange().dataThemeChange();
 });
 </script>
 
@@ -227,13 +232,13 @@ onBeforeUnmount(() => {
 .btnButton {
   width: 361px;
   height: 51px;
-  background: #008f4d;
+  // background: #008f4d;
   border: none;
   border-radius: 5px;
   box-shadow: 0 4px 10px 0 rgb(96 232 168 / 34%);
 
   span {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
