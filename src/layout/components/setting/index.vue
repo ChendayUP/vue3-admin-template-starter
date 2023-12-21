@@ -454,7 +454,7 @@ onBeforeMount(() => {
         &:nth-child(1) {
           width: 30%;
           height: 100%;
-          background: #1b2a47;
+          background: #008f4d;
         }
 
         &:nth-child(2) {
@@ -474,7 +474,7 @@ onBeforeMount(() => {
         &:nth-child(1) {
           width: 100%;
           height: 30%;
-          background: #1b2a47;
+          background: #008f4d;
           box-shadow: 0 0 1px #888;
         }
       }
@@ -485,7 +485,7 @@ onBeforeMount(() => {
         &:nth-child(1) {
           width: 100%;
           height: 30%;
-          background: #1b2a47;
+          background: #008f4d;
           box-shadow: 0 0 1px #888;
         }
 

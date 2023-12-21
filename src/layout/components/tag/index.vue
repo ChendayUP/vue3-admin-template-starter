@@ -584,7 +584,6 @@ onBeforeUnmount(() => {
       trigger="click"
       placement="bottom-end"
       @command="handleCommand"
-      v-if="false"
     >
       <span class="arrow-down">
         <IconifyIconOffline :icon="ArrowDown" class="dark:text-white" />
