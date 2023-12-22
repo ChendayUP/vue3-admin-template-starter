@@ -1,7 +1,11 @@
-# 数据运营平台前端
+# vue3 admin template starter
 
-## 依赖安装
-pnpm i 
+quick start a new vue3 admin project
 
-## 本地开发
-pnpm dev 
+## local install
+
+pnpm i
+
+## local development
+
+pnpm dev
