@@ -13,10 +13,10 @@ export const useUserStore = defineStore({
   id: "pure-user",
   state: (): userType => ({
     // 用户名
-    username:
-      storageSession().getItem<DataInfo<number>>(sessionKey)?.username ?? "",
+    // username:
+    //   storageSession().getItem<DataInfo<number>>(sessionKey)?.username ?? "",
     // 页面级别权限
-    roles: storageSession().getItem<DataInfo<number>>(sessionKey)?.roles ?? []
+    roles: []
   }),
   actions: {
     /** 存储用户名 */
@@ -32,8 +32,10 @@ export const useUserStore = defineStore({
       return new Promise<UserResult>((resolve, reject) => {
         getLogin(data)
           .then(data => {
-            if (data) {
+            if (data.code === 200) {
               setToken(data.data);
+              resolve(data);
+            } else {
               resolve(data);
             }
           })
